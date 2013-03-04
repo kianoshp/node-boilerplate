@@ -1,5 +1,5 @@
 Node-Boilerplate
-==========
+=============================================
 
 This is a series of files and tools that are used everytime I create a new site. The following are the components of the boilerplate:
 
@@ -13,6 +13,16 @@ This is a series of files and tools that are used everytime I create a new site.
 Installation
 ------------
 
-1. Clone this repository. 
-2. Run 'npm install' to get all the required modules. 
-3. Run 'node server.js'
+Clone this repository:
+
+git@github.com:kianoshp/node-boilerplate.git
+
+
+Run:
+
+npm install
+
+
+Run: 
+
+node server.js
