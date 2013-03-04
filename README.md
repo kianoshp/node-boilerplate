@@ -14,15 +14,14 @@ Installation
 ------------
 
 Clone this repository:
-
+```bash
 git@github.com:kianoshp/node-boilerplate.git
-
-
+```
 Run:
-
+```bash
 npm install
-
-
+```
 Run: 
-
+```bash
 node server.js
+```
