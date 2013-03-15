@@ -5,7 +5,7 @@
 
     var InitialPageModel;
     return InitialPageModel = Backbone.Model.extend({
-    	url: '/initialPage'
+		url: '/initialPage'
     });
   });
 }).call(this);

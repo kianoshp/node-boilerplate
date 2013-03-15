@@ -19,7 +19,8 @@ module.exports = function(grunt) {
       randomNumber: '<%= Math.random() * 1000 %>'
     },
     lint: {
-      files: ['grunt.js', '<%= project.js %>/**/*.js', '<%= project.test %>/spec/**/*.js']
+      multistr: true,
+      files: ['grunt.js', '<%= project.js %>/**/*.js', '<%= project.test %>/spec/**/*.js', '!<%= project.js %>/libs/*.js']
     },
     jasmine: {
       amd: true,
@@ -40,8 +41,8 @@ module.exports = function(grunt) {
       }
     },
     watch: {
-      files: '[<config:lint.files>, <config:jasmine.specs>]',
-      tasks: 'lint jasmin-test'
+      files: ['<config:lint.files>', '<config:jasmine.specs>'],
+      tasks: 'lint jasmine-test'
     },
     jshint: {
       options: {
@@ -55,7 +56,8 @@ module.exports = function(grunt) {
         undef: true,
         boss: true,
         eqnull: true,
-        browser: true
+        browser: true,
+        multistr: true
       },
       globals: {
         jQuery: true,

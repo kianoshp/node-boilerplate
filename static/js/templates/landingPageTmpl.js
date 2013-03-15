@@ -1,10 +1,10 @@
 (function() {
 
   define(['underscore'], function(_) {
-    return _.extend(JST, {
+    return _.extend(window.JST, {
       initialPage: '\
-      			<div><%= message %></div>\
-			'
+		<div><%= message %></div>\
+		'
     });
   });
 
