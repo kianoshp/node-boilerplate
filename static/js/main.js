@@ -22,7 +22,6 @@ define(['underscore', 'jquery', 'backbone', 'views/landingPageView', 'models/ini
 
 			renderIt: function(){
 				console.log('here we go');
-				console.log('doing it');
 			}
 
 		});

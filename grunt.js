@@ -1,6 +1,5 @@
 /*global module:false*/
 module.exports = function(grunt) {
-
   // Project configuration.
   grunt.initConfig({
     pkg: '<json:package.json>',
@@ -19,8 +18,16 @@ module.exports = function(grunt) {
       randomNumber: '<%= Math.random() * 1000 %>'
     },
     lint: {
-      multistr: true,
-      files: ['grunt.js', '<%= project.js %>/**/*.js', '<%= project.test %>/spec/**/*.js', '!<%= project.js %>/libs/*.js']
+      files: ['grunt.js', 
+              '<%= project.js %>/common/*.js', 
+              '<%= project.js %>/data/*.js', 
+              '<%= project.js %>/models/*.js', 
+              '<%= project.js %>/templates/*.js', 
+              '<%= project.js %>/views/*.js', 
+              '<%= project.js %>/config.js', 
+              '<%= project.js %>/global.js', 
+              '<%= project.js %>/main.js', 
+              '<%= project.test %>/spec/**/*.js']
     },
     jasmine: {
       amd: true,
@@ -69,7 +76,8 @@ module.exports = function(grunt) {
         runs: true,
         waitsFor: true,
         $: true,
-        console: true
+        console: true,
+        exports: true
       }
     },
     uglify: {}
