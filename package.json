@@ -1,5 +1,5 @@
 {
-  "name": "Give it a name and love it",
+  "name": "Give_it_a_name_and_love_it",
   "description": "Deacribe the project",
   "author": "King of the world",
   "version": "0.0.1",
@@ -9,14 +9,15 @@
   },
   "dependencies": {
     "connect": ">=1.8.5",
-    "express": ">=3.1.0",
+    "express": ">=3.0.0",
     "jade": ">=0.20.0",
     "mongoose": ">=2.4.8",
     "passport": "0.1.x",
-    "passport-local": "0.1.x"
+    "passport-local": "0.1.x",
+    "request": "*"
   },
   "devDependencies": {
-    "jasmin-node": ">=1.2.2"
+    "jasmine-node": ">=1.2.2"
   },
   "engine": "node >= 0.6.6"
 }
