@@ -18,9 +18,13 @@
   },
   "devDependencies": {
     "jasmine-node": ">=1.2.2",
-    "grunt-jasmine-runner": "*",
+    "grunt-contrib-jasmine": "*",
     "grunt-contrib-jshint": "~0.5.4",
-    "grunt-template-jasmine-requirejs": "~0.1.2"
+    "grunt-template-jasmine-requirejs": "~0.1.2",
+    "grunt-contrib-concat": "*",
+    "grunt-contrib-uglify": "*",
+    "grunt-contrib-watch": "*",
+    "phantomjs": "1.8.2-0"
   },
   "engine": "node >= 0.6.6"
 }

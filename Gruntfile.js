@@ -81,7 +81,21 @@ module.exports = function(grunt) {
     jasmine: {
       src : ['static/test/spec/**/*.js'],
       options: {
-        specs : 'static/test/spec/**/*.js'
+        specs : 'static/test/spec/**/*Spec.js',
+        template: require('grunt-template-jasmine-requirejs'),
+        templateOptions: {
+          requireConfig: {
+            //mainConfigFile: 'static/test/SpecRunner.js',
+            paths: {
+              'jquery': './static/js/libs/jquery'
+            }
+          }
+        }
+      }
+    },
+    connect: {
+      test: {
+        port: 8082
       }
     }
   });
@@ -92,6 +106,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-contrib-connect');
 
   // Default task
   grunt.registerTask('default', ['jshint', 'concat', 'jasmine-test']);
