@@ -14,10 +14,13 @@
     "mongoose": ">=2.4.8",
     "passport": "0.1.x",
     "passport-local": "0.1.x",
-    "request": "*"
+    "request": "*",
+    "fs": "*",
+    "socket.io": "*"
   },
   "devDependencies": {
     "jasmine-node": ">=1.2.2",
+    "grunt": "*",
     "grunt-contrib-jasmine": "*",
     "grunt-contrib-jshint": "~0.5.4",
     "grunt-template-jasmine-requirejs": "~0.1.2",

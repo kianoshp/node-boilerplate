@@ -1,10 +1,10 @@
 //setup Dependencies
 var express   = require('express')
-    , port    = (process.env.PORT || 8081)
+    , port    = (process.env.PORT || 8082)
     , request = require('request')
     , fs      = require('fs')
     , pjson   = require('./package.json')
-    , data    = require(__dirname + '/static/js/data/data.js');
+    , data    = require(__dirname + '/assets/js/data/data.js');
 
 //Setup Express
 var server = express();
@@ -14,7 +14,7 @@ server.configure(function(){
     server.use(express.bodyParser());
     server.use(express.cookieParser());
     server.use(express.session({ secret: "shhhhhhhhh!"}));
-    server.use(express.static(__dirname + '/static'));
+    server.use(express.static(__dirname + '/assets'));
     server.use(server.router);
     server.use(function(err, req, res, next){
       if (err instanceof NotFound) {
